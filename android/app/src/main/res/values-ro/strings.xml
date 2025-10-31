@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">Înapoi</string>
@@ -98,6 +99,7 @@
     <string name="measurement_units">Unități de măsură</string>
     <!-- Detailed description of Measurement Units settings button -->
     <string name="measurement_units_summary">Alege între mile și kilometri</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">Unde să mănânci</string>
@@ -143,6 +145,7 @@
     <string name="category_water">Apă</string>
     <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
     <string name="category_rv">Pentru rulote</string>
+
     <!-- SECTION: Other translations -->
     <!-- Notes field in Bookmarks view -->
     <string name="description">Detalii</string>
@@ -339,6 +342,7 @@
     <string name="gray">Gri</string>
     <!-- blue gray color -->
     <string name="blue_gray">Gri albăstriu</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_disclaimer_title">Când parcurgi traseul, ai în vedere următoarele:</string>
     <string name="dialog_routing_disclaimer_priority">— Condițiile de drum, legile și semnele rutiere sunt mai importante decât indicațiile navigatorului;</string>
@@ -368,6 +372,7 @@
     <string name="not_now">Nu acum</string>
     <string name="dialog_routing_download_and_build_cross_route">Vrei să descarci harta și să creezi un traseu mai bun care include mai multe hărți?</string>
     <string name="dialog_routing_download_cross_route">Descarcă hărți suplimentare pentru a crea un traseu mai bun care să traverseze limitele acestei hărți.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <string name="search_without_internet_advertisement">Pentru a putea începe căutarea și crearea unor trasee, descarcă harta. După aceasta nu vei mai avea nevoie de conexiune la internet.</string>
     <string name="search_select_map">Alege harta</string>
@@ -518,6 +523,7 @@
     <string name="minute">min</string>
     <string name="day">z</string>
     <string name="placepage_more_button">Mai mult</string>
+    <!-- A disable button text in the explanation dialog that opens hotel details page on Kayak website. -->
     <string name="placepage_edit_bookmark_button">Modifică locul preferat</string>
     <string name="placepage_personal_notes_hint">Însemnări personale (text sau html)</string>
     <string name="editor_comment_hint">Comentariu…</string>
@@ -697,6 +703,7 @@
     <string name="moreyear_ago_sorttype">Cu mai mult de un an în urmă</string>
     <string name="near_me_sorttype">Lângă mine</string>
     <string name="others_sorttype">Altele</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">Mâncare</string>
     <string name="tourist_places">Obiective turistice</string>
@@ -818,6 +825,8 @@
     <!-- Prompt for stopping a track recording. -->
     <string name="stop_track_recording">Opriți înregistrarea traseului</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
+    <string name="track_recording_title">Înregistrare traseu</string>
+    <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="stop_without_saving">Oprire fără salvare</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="continue_recording">Continuați înregistrarea</string>
@@ -832,5 +841,4 @@
     <string name="uri_open_location_failed">Nu există nicio aplicație instalată care să poată deschide locația</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Auto în navigație</string>
-    <string name="track_recording_title">Înregistrare traseu</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">मागे</string>
@@ -35,6 +36,10 @@
     <!-- Button text for the button under the country_status_download_failed message -->
     <string name="try_again">पुन्हा प्रयत्न करा</string>
     <string name="about_menu_title">Organic Maps बद्दल</string>
+    <!-- Text in About screen -->
+    <string name="about_headline">सर्वांसाठी विनामूल्य, आवडीने तयार केलेले</string>
+    <!-- Text in About screen -->
+    <string name="about_proposition_1">• जाहिराती नाही, माहितीचा मागोवा नाही, डेटा संग्रहण नाही</string>
     <!-- Text in About screen -->
     <string name="about_proposition_2">• बॅटरी संपत नाही, ऑफलाइन कार्य करते</string>
     <!-- Text in About screen -->
@@ -90,6 +95,7 @@
     <string name="measurement_units">मापन एकके</string>
     <!-- Detailed description of Measurement Units settings button -->
     <string name="measurement_units_summary">मैल की किलोमीटर ह्यामध्ये निवडा</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">जेवायचे ठिकाण</string>
@@ -133,6 +139,9 @@
     <string name="category_recycling">भंगारवाला</string>
     <!-- Search category for water; any changes should be duplicated in categories.txt @category_water! also used to sort bookmarks by type -->
     <string name="category_water">पाणी</string>
+    <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
+    <string name="category_rv">कँपिंग वाहन सोयी</string>
+
     <!-- SECTION: Other translations -->
     <!-- Notes field in Bookmarks view -->
     <string name="description">चिठ्ठया</string>
@@ -216,6 +225,10 @@
     <string name="pref_map_3d_buildings_disabled_summary">3D इमारती वीज बचत मोडमध्ये बंद केल्या आहेत</string>
     <!-- Settings «Route» category: «Tts enabled» title -->
     <string name="pref_tts_enable_title">ध्वनी सूचना</string>
+    <!-- Settings «Route» category: «Tts announce street names» title -->
+    <string name="pref_tts_street_names_title">मार्गांची नावे घोषित करा</string>
+    <!-- Settings «Route» category: «Tts announce street names» description -->
+    <string name="pref_tts_street_names_description">चालू केल्यास, वळण घेण्यापूर्वी रस्त्याचे किंवा वळणाचे नाव बोलून सांगितले जाईल.</string>
     <!-- Settings «Route» category: «Tts language» title -->
     <string name="pref_tts_language_title">ध्वनी भाषा</string>
     <!-- Settings «Route» category: «Test Voice Directions» title -->
@@ -239,6 +252,8 @@
     <string name="help">मदत</string>
     <!-- Button in the main Help dialog -->
     <string name="faq">वारंवार विचारलेले प्रश्न</string>
+    <!-- Button in the main menu -->
+    <string name="donate">दान करा</string>
     <string name="already_donated">आधीच दान केले</string>
     <string name="remind_me_later">नंतर आठवण करून द्या</string>
     <string name="support_organic_maps">Organic Maps ला समर्थन द्या</string>
@@ -325,6 +340,7 @@
     <string name="gray">राखाडी</string>
     <!-- blue gray color -->
     <string name="blue_gray">निळा राखाडी</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_disclaimer_title">प्रवास करताना, कृपात लक्षात ठेवा:</string>
     <string name="dialog_routing_disclaimer_priority">— मार्गनिर्देशक संकेतांपेक्षा रस्त्याची परिस्थिती, वाहतुकीचे नियम व वाहतुकीचे चिन्ह ह्यांना जास्त प्राधान्य द्या;</string>
@@ -354,6 +370,7 @@
     <string name="not_now">आता नाही</string>
     <string name="dialog_routing_download_and_build_cross_route">एकापेक्षा जास्त नकाशात पसरलेला अधिक चांगला मार्ग तयार करण्यासाठी, नकाशा डाउनलोड केलेला चालेल का?</string>
     <string name="dialog_routing_download_cross_route">या नकाशाच्या सीमा ओलांडणारा एक चांगला मार्ग तयार करण्यासाठी अधिक नकाशे डाउनलोड करा.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <string name="search_without_internet_advertisement">ठिकाण व मार्ग शोध सुरु करण्यासाठी, कृपया नकाशा डाउनलोड करा. त्यानंतर तुम्हाला इंटरनेटची आवश्यकता भासणार नाही.</string>
     <string name="search_select_map">नकाशा निवडा</string>
@@ -411,6 +428,8 @@
     <string name="day_off_today">आज बंद</string>
     <string name="day_off">बंद</string>
     <string name="today">आज</string>
+    <string name="opens_in">आणखी %s मध्ये उघडेल</string>
+    <string name="closes_in">आणखी %s मध्ये बंद होईल</string>
     <string name="closed">बंद</string>
     <string name="edit_opening_hours">व्यवसायाची वेळ संपादित करा</string>
     <string name="no_osm_account">OpenStreetMap खाते नाही?</string>
@@ -418,6 +437,7 @@
     <string name="login">लॉग इन</string>
     <!-- Status message indicating that user did not login to OSM profile yet. -->
     <string name="not_signed_in">साइन इन केलेले नाही</string>
+    <string name="login_osm">OpenStreetMap मध्ये लॉगिन करा</string>
     <string name="password">पासवर्ड</string>
     <string name="forgot_password">पासवर्ड विसरलात?</string>
     <string name="logout">लॉग आऊट</string>
@@ -501,6 +521,7 @@
     <string name="minute">मिनिट</string>
     <string name="day">दि</string>
     <string name="placepage_more_button">अधिक</string>
+    <!-- A disable button text in the explanation dialog that opens hotel details page on Kayak website. -->
     <string name="placepage_edit_bookmark_button">खूणपत्र संपादित करा</string>
     <string name="placepage_personal_notes_hint">वैयक्तिक चिठ्ठ्या (मजकूर किंवा html)</string>
     <string name="editor_comment_hint">टिप्पणी…</string>
@@ -523,6 +544,7 @@
     <string name="editor_share_to_all_dialog_title">तुम्ही ते सर्व वापरकर्त्यांना पाठवू इच्छिता?</string>
     <!-- Dialog before publishing the modifications to the public map. -->
     <string name="editor_share_to_all_dialog_message_1">आपण कोणतीही वैयक्तिक माहिती प्रविष्ट केला नाही याची खात्री करा.</string>
+    <string name="editor_share_to_all_dialog_message_2">OpenStreetMap संपादक बदल तपासतील व काही प्रश्न असल्यास तुमच्याशी संपर्क साधतील.</string>
     <string name="navigation_stop_button">थांबा</string>
     <!-- Shown as toast when starting the recent track recording -->
     <string name="track_recording">ट्रॅक रेकॉर्ड करत आहे</string>
@@ -677,6 +699,7 @@
     <string name="moreyear_ago_sorttype">एक वर्षांपूर्वी</string>
     <string name="near_me_sorttype">माझ्या जवळ</string>
     <string name="others_sorttype">इतर</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">अन्न</string>
     <string name="tourist_places">पर्यटन स्थळ</string>
@@ -802,6 +825,8 @@
     <!-- Prompt for stopping a track recording. -->
     <string name="stop_track_recording">ट्रॅक रेकॉर्डिंग थांबवा</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
+    <string name="track_recording_title">ट्रॅक रेकॉर्डिंग</string>
+    <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="stop_without_saving">जतन न करता थांबवा</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="continue_recording">रेकॉर्डिंग चालू ठेवा</string>
@@ -816,13 +841,4 @@
     <string name="uri_open_location_failed">स्थान उघडू शकणारे कोणतेही ॲप स्थापित केलेले नाही</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">नेव्हिगेशनमध्ये ऑटो</string>
-    <string name="pref_tts_street_names_title">मार्गांची नावे घोषित करा</string>
-    <string name="about_proposition_1">• जाहिराती नाही, माहितीचा मागोवा नाही, डेटा संग्रहण नाही</string>
-    <string name="donate">दान करा</string>
-    <string name="login_osm">OpenStreetMap मध्ये लॉगिन करा</string>
-    <string name="about_headline">सर्वांसाठी विनामूल्य, आवडीने तयार केलेले</string>
-    <string name="pref_tts_street_names_description">चालू केल्यास, वळण घेण्यापूर्वी रस्त्याचे किंवा वळणाचे नाव बोलून सांगितले जाईल.</string>
-    <string name="editor_share_to_all_dialog_message_2">OpenStreetMap संपादक बदल तपासतील व काही प्रश्न असल्यास तुमच्याशी संपर्क साधतील.</string>
-    <string name="category_rv">कँपिंग वाहन सोयी</string>
-    <string name="track_recording_title">ट्रॅक रेकॉर्डिंग</string>
 </resources>

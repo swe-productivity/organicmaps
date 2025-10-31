@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">Takaisin</string>
@@ -57,7 +58,8 @@
     <string name="download_resources">Ennen aloitusta laitteelle tulee ladata yleinen maailmankartta.
 \nSe tarvitsee yhteensä %s tilaa.</string>
     <string name="download_resources_continue">Siirry karttaan</string>
-    <string name="downloading_country_can_proceed">Ladataan %s. Voit nyt jatkaa \nkartalle.</string>
+    <string name="downloading_country_can_proceed">Ladataan %s. Voit nyt jatkaa 
+\nkartalle.</string>
     <string name="download_country_ask">Ladataanko %s?</string>
     <string name="update_country_ask">Päivitetäänkö %s?</string>
     <!-- REMOVE THIS STRING AFTER REFACTORING -->
@@ -101,6 +103,7 @@
     <string name="measurement_units">Mittayksiköt</string>
     <!-- Detailed description of Measurement Units settings button -->
     <string name="measurement_units_summary">Valitse mailit tai kilometrit</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">Missä syödä</string>
@@ -146,11 +149,17 @@
     <string name="category_water">Vesi</string>
     <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
     <string name="category_rv">Karavaanaritilat</string>
+
     <!-- SECTION: Other translations -->
     <!-- Notes field in Bookmarks view -->
     <string name="description">Muistiinpanot</string>
     <!-- Email Subject when sharing bookmark list -->
     <string name="share_bookmarks_email_subject">Jaetut Organic Maps-kirjanmerkit</string>
+    <string name="share_bookmarks_email_body">Hei! 
+\n
+\nLiitteenä ovat kirjamerkkini; Avaa ne Organic Maps -sovelluksessa. Mikäli sinulla ei ole vielä sovellusta asennettuna, voit ladata sen osoitteesta: https://omaps.app/get?kmz 
+\n
+\nNauti matkustamisesta Organic Maps:n kanssa!</string>
     <!-- message title of loading file -->
     <string name="load_kmz_title">Ladataan kirjanmerkkejä</string>
     <!-- Kmz file successful loading -->
@@ -245,6 +254,26 @@
     <string name="website">Kotisivut</string>
     <!-- Text in About menu, opens Organic Maps news website -->
     <string name="news">Uutiset</string>
+    <!-- Text in menu -->
+    <string name="github">Github</string>
+    <!-- Text in menu -->
+    <string name="telegram">Telegram</string>
+    <!-- Text in menu -->
+    <string name="matrix">[Matrix]</string>
+    <!-- Text in menu -->
+    <string name="mastodon">Mastodon</string>
+    <!-- Text in menu -->
+    <string name="facebook">Facebook</string>
+    <!-- Text in menu -->
+    <string name="twitter">X (Twitter)</string>
+    <!-- Text in menu -->
+    <string name="instagram">Instagram</string>
+    <!-- Text in the editor -->
+    <string name="vk">VK</string>
+    <!-- Text in the editor -->
+    <string name="editor_line_social_network">LINE</string>
+    <!-- Text in menu -->
+    <string name="openstreetmap">OpenStreetMap</string>
     <!-- Settings: Send feedback button and dialog title -->
     <string name="feedback">Palaute</string>
     <!-- Text in menu -->
@@ -341,6 +370,7 @@
     <string name="gray">Harmaa</string>
     <!-- blue gray color -->
     <string name="blue_gray">Siniharmaa</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_disclaimer_title">Muista seuraavat asiat seuratessasi reittiä:</string>
     <string name="dialog_routing_disclaimer_priority">— Tien kunnon, liikennesääntöjen ja tiekylttien noudattaminen on aina ensisijaista verrattuna navigointisovelluksen ohjeisiin;</string>
@@ -370,6 +400,7 @@
     <string name="not_now">Ei nyt</string>
     <string name="dialog_routing_download_and_build_cross_route">Haluatko ladata kartan ja luoda paremman reitin, joka ulottuu usealle kartalle?</string>
     <string name="dialog_routing_download_cross_route">Lataa kartta ja luo parempi reitti, joka ylittää tämän kartan reunan.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <string name="search_without_internet_advertisement">Lataa kartta jotta voit käyttää hakua ja luoda reittejä. Tämän jälkeen et tarvitse enää Internet-yhteyttä.</string>
     <string name="search_select_map">Valitse kartta</string>
@@ -387,6 +418,8 @@
     <string name="clear_search">Poista hakuhistoria</string>
     <!-- Place Page link to Wikipedia article (if map object has it). -->
     <string name="read_in_wikipedia">Wikipedia</string>
+    <!-- Place Page link to Wikimedia Commons. -->
+    <string name="wikimedia_commons">Wikimedia Commons</string>
     <string name="p2p_your_location">Sijaintisi</string>
     <string name="p2p_start">Aloita</string>
     <string name="p2p_from_here">Lähtöpaikka</string>
@@ -460,6 +493,8 @@
     <string name="email_or_username">Sähköposti tai käyttäjätunnus</string>
     <string name="editor_add_phone">Lisää puhelinnumero</string>
     <string name="level">Kerros</string>
+    <!-- Building level -->
+    <string name="level_value_generic">Kerros: %s</string>
     <string name="downloader_delete_map_dialog">Kaikki karttaan tehdyt muutokset poistetaan kartan mukana.</string>
     <string name="downloader_update_maps">Päivitä kartat</string>
     <string name="downloader_mwm_migration_dialog">Sinun täytyy päivittää kaikki kartat ja suunnitella reitti uudelleen luodaksesi uuden reitin.</string>
@@ -481,7 +516,7 @@
     <string name="placepage_add_business_button">Lisää organisaatio</string>
     <string name="message_invalid_feature_position">Kohdetta ei voida asettaa tänne</string>
     <!-- Text in About and OSM Login screens. First %@ is replaced by a local, human readable date. -->
-    <string name="osm_presentation">Yhteisön luomat OpenStreetMap-tiedot %s:sta alkaen. Lisätietoja kartan muokkaamisesta ja päivittämisestä osoitteessa OpenStreetMap.org.</string>
+    <string name="osm_presentation">Yhteisön luomat OpenStreetMap-tiedot %s:sta alkaen. Lisätietoja kartan muokkaamisesta ja päivittämisestä osoitteessa OpenStreetMap.org</string>
     <!-- OSM explanation on Android login screen -->
     <string name="login_osm_presentation">OpenStreetMap.org (OSM) on yhteisöprojekti, jonka tarkoituksena on rakentaa ilmainen ja avoin kartta. Se on Organic Mapsin tärkein karttatietojen lähde ja toimii samalla tavalla kuin Wikipedia. Voit lisätä tai muokata paikkoja, ja ne tulevat miljoonien käyttäjien saataville kaikkialla maailmassa.
 \nLiity yhteisöön ja auta tekemään parempi kartta kaikille!</string>
@@ -520,6 +555,7 @@
     <string name="minute">min</string>
     <string name="day">pv</string>
     <string name="placepage_more_button">Lisää</string>
+    <!-- A disable button text in the explanation dialog that opens hotel details page on Kayak website. -->
     <string name="placepage_edit_bookmark_button">Muokkaa kirjanmerkkiä</string>
     <string name="placepage_personal_notes_hint">Henkilökohtaiset merkinnät (teksti tai html)</string>
     <string name="editor_comment_hint">Kommentti…</string>
@@ -570,7 +606,9 @@
     <!-- Settings: "Send general feedback" button -->
     <string name="feedback_general">Yleinen palaute</string>
     <string name="prefs_languages_information">Käytämme ääniohjeisiin tekstistä puheeksi -järjestelmää. Monet Android-laitteet käyttävät Googlen tekstistä puheeksi -sovellusta, jonka voit ladata tai päivittää Google Playssä</string>
-    <string name="prefs_languages_information_off">Joidenkin kielien osalta sinun täytyy asentaa toinen puhesyntetisaattori tai lisäkielipaketti sovelluskaupasta (Google Play, Galaxy Store, App Gallery, FDroid).\nAvaa laitteen asetukset → Kieli ja syöttötapa → Puhe → Teksistä puheeksi -toisto. \nTäällä voit hallita puhesynteesin asetuksia (esimerkiksi ladata offline-tilassa käytettävän kielipaketin) ja valita toisen tekstistä puheeksi -moottorin.</string>
+    <string name="prefs_languages_information_off">Joidenkin kielien osalta sinun täytyy asentaa toinen puhesyntetisaattori tai lisäkielipaketti sovelluskaupasta (Google Play, Galaxy Store, App Gallery, FDroid).
+\nAvaa laitteen asetukset → Kieli ja syöttötapa → Puhe → Teksistä puheeksi -toisto. 
+\nTäällä voit hallita puhesynteesin asetuksia (esimerkiksi ladata offline-tilassa käytettävän kielipaketin) ja valita toisen tekstistä puheeksi -moottorin.</string>
     <string name="prefs_languages_information_off_link">Lisätietoja saat tästä oppaasta.</string>
     <string name="transliteration_title">Translitterointi latinalaisiksi aakkosiksi</string>
     <string name="learn_more">Lisätietoja</string>
@@ -585,7 +623,7 @@
     <!-- Alert to ask user relogin to OpenStreetMap with OAuth2 flow after OAuth1 authentication is deprecated. -->
     <string name="alert_reauth_message">Kirjaudu sisään OpenStreetMapiin, jotta voit ladata kaikki karttamuutoksesi automaattisesti. Lisätietoja <a href="https://github.com/organicmaps/organicmaps/issues/6144">täältä</a>.</string>
     <string name="dialog_error_storage_title">Ongelma tallennustilan käyttämisessä</string>
-    <string name="dialog_error_storage_message">Ulkoinen tallennustila ei ole käytettävissä, SD-kortti on luultavasti poistettu tai vahingoittunut tai tiedostojärjestelmä on vain luku -tilassa. Tarkista SD-kortin toiminta tai ota yhteyttä osoitteeseen support@organicmaps.app</string>
+    <string name="dialog_error_storage_message">Ulkoinen tallennustila ei ole käytettävissä, SD-kortti on luultavasti poistettu tai vahingoittunut tai tiedostojärjestelmä on vain luku -tilassa. Tarkista SD-kortin toiminta tai ota yhteyttä osoitteeseen support\@organicmaps.app</string>
     <string name="setting_emulate_bad_storage">Jäljittele virheellistä tallennustilaa</string>
     <string name="error_enter_correct_name">Anna oikea nimi</string>
     <string name="bookmark_lists">Luettelot</string>
@@ -624,7 +662,9 @@
     <string name="privacy_policy">Yksityisyyskäytäntö</string>
     <string name="terms_of_use">Käyttöehdot</string>
     <string name="button_layer_traffic">Liikenne</string>
+    <!-- Hiking routes layer name in the Styles and Layers dialog -->
     <string name="button_layer_hiking">Vaellus</string>
+    <!-- Cycling routes layer name in the Styles and Layers dialog -->
     <string name="button_layer_cycling">Pyöräily</string>
     <string name="button_layer_subway">Metro</string>
     <string name="layers_title">Karttatyylit ja tasot</string>
@@ -699,6 +739,7 @@
     <string name="moreyear_ago_sorttype">Yli vuosi sitten</string>
     <string name="near_me_sorttype">Lähelläni</string>
     <string name="others_sorttype">Muut</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">Ruoka</string>
     <string name="tourist_places">Nähtävyydet</string>
@@ -752,6 +793,18 @@
     <string name="change_map_locale">Karttakieli</string>
     <!-- OpenStreetMap text on splash screen -->
     <string name="splash_subtitle">OpenStreetMapin karttatiedot</string>
+    <!-- Telegram group url for the "?" About page -->
+    <string name="telegram_url">https://t.me/OrganicMapsApp</string>
+    <!-- Instagram account url for the "?" About page -->
+    <string name="instagram_url">https://www.instagram.com/organicmaps.app</string>
+    <!-- A link to the TTS FAQ -->
+    <string name="tts_info_link">https://organicmaps.app/faq/text-to-speech-android-tts/</string>
+    <!-- Translated Organic Maps site, add new translations here: https://github.com/organicmaps/organicmaps.github.io/tree/master/content -->
+    <string name="translated_om_site_url">https://organicmaps.app/</string>
+    <!-- Link to OSM wiki for Editor, Profile and About pages -->
+    <string name="osm_wiki_about_url">https://wiki.openstreetmap.org/wiki/About_OpenStreetMap</string>
+    <!-- A number of bookmarks and a number of tracks, separated by comma, like: 1 bookmark, 5 tracks -->
+    <string name="comma_separated_pair">%1$s, %2$s</string>
     <!-- App Tip #00 -->
     <string name="app_tip_00">Kiitos, että käytät yhteisön laatimia karttojamme!</string>
     <!-- App tip #01 -->
@@ -824,6 +877,8 @@
     <!-- Prompt for stopping a track recording. -->
     <string name="stop_track_recording">Lopeta reitin tallennus</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
+    <string name="track_recording_title">Reitin tallennus</string>
+    <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="stop_without_saving">Lopeta tallentamatta</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="continue_recording">Jatka tallennusta</string>
@@ -838,24 +893,4 @@
     <string name="uri_open_location_failed">Ei asennettua sovellusta, joka voi avata sijainnin</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Automaattinen navigointi</string>
-    <string name="facebook">Facebook</string>
-    <string name="editor_line_social_network">LINE</string>
-    <string name="vk">VK</string>
-    <string name="openstreetmap">OpenStreetMap</string>
-    <string name="instagram_url">https://www.instagram.com/organicmaps.app</string>
-    <string name="level_value_generic">Kerros: %s</string>
-    <string name="share_bookmarks_email_body">Hei! \n\nLiitteenä ovat kirjamerkkini; Avaa ne Organic Maps -sovelluksessa. Mikäli sinulla ei ole vielä sovellusta asennettuna, voit ladata sen osoitteesta: https://omaps.app/get?kmz \n\nNauti matkustamisesta Organic Maps:n kanssa!</string>
-    <string name="tts_info_link">https://organicmaps.app/faq/text-to-speech-android-tts/</string>
-    <string name="translated_om_site_url">https://organicmaps.app/</string>
-    <string name="telegram">Telegram</string>
-    <string name="twitter">X (Twitter)</string>
-    <string name="mastodon">Mastodon</string>
-    <string name="matrix">[Matrix]</string>
-    <string name="osm_wiki_about_url">https://wiki.openstreetmap.org/wiki/About_OpenStreetMap</string>
-    <string name="github">Github</string>
-    <string name="comma_separated_pair">%1$s, %2$s</string>
-    <string name="instagram">Instagram</string>
-    <string name="telegram_url">https://t.me/OrganicMapsApp</string>
-    <string name="wikimedia_commons">Wikimedia Commons</string>
-    <string name="track_recording_title">Reitin tallennus</string>
 </resources>

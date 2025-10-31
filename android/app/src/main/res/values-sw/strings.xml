@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- A dialog title, that warns a user that Precise Location is disabled and suggests to turn it on -->
     <string name="limited_accuracy">Usahihi mdogo</string>
@@ -21,6 +22,7 @@
     <string name="address">Anwani</string>
     <!-- Header of settings activity where user defines storage path -->
     <string name="maps_storage">Hifadhi ramani kwenye</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">Sehemu ya kula</string>
@@ -36,10 +38,15 @@
     <string name="category_children">Mapumziko ya familia</string>
     <!-- Search category for hospitals; any changes should be duplicated in categories.txt @category_hospital! -->
     <string name="category_hospital">Hospitali</string>
+    <!-- Search category for post offices; any changes should be duplicated in categories.txt @category_post! -->
+    <string name="category_post">Posta</string>
+    <!-- Search category for police; any changes should be duplicated in categories.txt @category_police! -->
+    <string name="category_police">Polisi</string>
     <!-- Search category for water; any changes should be duplicated in categories.txt @category_water! also used to sort bookmarks by type -->
     <string name="category_water">Maji</string>
     <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
     <string name="category_rv">Kwa RV</string>
+
     <!-- SECTION: Other translations -->
     <!-- Failed to recognize the format of a bookmarks or tracks file. -->
     <string name="unknown_file_type">Aina ya faili haitambuliwi na programu:
@@ -83,8 +90,6 @@
     <string name="google_play_services">Huduma za Mahali za Google Play</string>
     <!-- Preference text -->
     <string name="pref_use_google_play">Tambua kwa haraka kadirio la eneo lako kwa kutumia Bluetooth, WiFi au mtandao wa simu</string>
-    <!-- Preference title -->
-    <!-- Preference description -->
     <!-- deep purple color -->
     <string name="deep_purple">Zambarau Iliyoiva</string>
     <!-- light blue color -->
@@ -101,9 +106,11 @@
     <string name="gray">Kijivu</string>
     <!-- blue gray color -->
     <string name="blue_gray">Kijivu Buluu</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_change_intermediate">Imeshindwa kupata eneo la kati.</string>
     <string name="dialog_routing_intermediate_not_determined">Tafadhali badilisha eneo lako la kati.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <!-- The message when user did not find anything in the search. -->
     <string name="search_not_found_query">Pakua eneo ambalo unatafuta au jaribu kuongeza jina la mji/kijiji kilicho karibu.</string>
@@ -271,6 +278,7 @@
     <string name="moreyear_ago_sorttype">Zaidi ya mwaka mmoja uliopita</string>
     <string name="near_me_sorttype">Karibu yangu</string>
     <string name="others_sorttype">Nyingine</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">Chakula</string>
     <string name="tourist_places">Vivutio</string>
@@ -381,6 +389,8 @@
     <!-- Prompt for stopping a track recording. -->
     <string name="stop_track_recording">Acha kurekodi</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
+    <string name="track_recording_title">Kurekodi njia</string>
+    <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="stop_without_saving">Acha bila kuhifadhi</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="continue_recording">Endelea kurekodi</string>
@@ -395,7 +405,4 @@
     <string name="uri_open_location_failed">Hakuna Programu iliyosakinishwa inayoweza kufungua eneo</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Urambazaji otomatiki</string>
-    <string name="category_police">Polisi</string>
-    <string name="category_post" translatable="false">Posta</string>
-    <string name="track_recording_title">Kurekodi njia</string>
 </resources>

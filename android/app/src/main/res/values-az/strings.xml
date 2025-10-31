@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">Geri</string>
@@ -101,6 +102,7 @@
     <string name="measurement_units">Ölçü vahidləri</string>
     <!-- Detailed description of Measurement Units settings button -->
     <string name="measurement_units_summary">Mil və ya kilometr seçin</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">Harada yemək</string>
@@ -146,6 +148,7 @@
     <string name="category_water">Su</string>
     <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
     <string name="category_rv">Karvan qurğuları</string>
+
     <!-- SECTION: Other translations -->
     <!-- Notes field in Bookmarks view -->
     <string name="description">Qeydlər</string>
@@ -344,6 +347,7 @@
     <string name="gray">Boz</string>
     <!-- blue gray color -->
     <string name="blue_gray">Mavi-boz</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_disclaimer_title">Marşrutunuzu izləyərkən aşağıdakıları yadda saxlayın:</string>
     <string name="dialog_routing_disclaimer_priority">— Yol şəraiti, yol hərəkəti qaydaları və yol nişanları həmişə naviqasiya məsləhətindən üstündür;</string>
@@ -373,6 +377,7 @@
     <string name="not_now">İndi yox</string>
     <string name="dialog_routing_download_and_build_cross_route">Xəritəni endirmək və çoxsaylı xəritələr arasında daha rahat marşrut yaratmaq istərdinizmi?</string>
     <string name="dialog_routing_download_cross_route">Bu xəritənin sərhədlərini keçən daha rahat marşrut yaratmaq üçün xəritəni endirin.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <string name="search_without_internet_advertisement">Axtarmaq və marşrut yaratmağa başlamaq üçün xəritəni endirin. Yüklədikdən sonra artıq internet bağlantısına ehtiyacınız olmayacaq.</string>
     <string name="search_select_map">Xəritə seçin</string>
@@ -523,6 +528,7 @@
     <string name="minute">dəq</string>
     <string name="day">gün</string>
     <string name="placepage_more_button">Digər</string>
+    <!-- A disable button text in the explanation dialog that opens hotel details page on Kayak website. -->
     <string name="placepage_edit_bookmark_button">Əlfəcini redaktə edin</string>
     <string name="placepage_personal_notes_hint">Şəxsi qeydlər (mətn və ya html)</string>
     <string name="editor_comment_hint">Şərh…</string>
@@ -629,7 +635,9 @@
     <string name="privacy_policy">Gizlilik Siyasəti</string>
     <string name="terms_of_use">İstifadə qaydaları</string>
     <string name="button_layer_traffic">Nəqliyyat</string>
+    <!-- Hiking routes layer name in the Styles and Layers dialog -->
     <string name="button_layer_hiking">Piyada gəzinti</string>
+    <!-- Cycling routes layer name in the Styles and Layers dialog -->
     <string name="button_layer_cycling">Velosiped gəzintisi</string>
     <string name="button_layer_subway">Metro</string>
     <string name="layers_title">Xəritə Üslubları və Qatları</string>
@@ -702,6 +710,7 @@
     <string name="moreyear_ago_sorttype">Bir ildən çox əvvəl</string>
     <string name="near_me_sorttype">Mənə yaxın</string>
     <string name="others_sorttype">Digərləri</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">Qida</string>
     <string name="tourist_places">Görməli yerlər</string>

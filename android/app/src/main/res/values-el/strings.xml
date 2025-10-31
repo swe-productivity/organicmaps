@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- SECTION: Strings -->
     <!-- Button text (should be short) -->
     <string name="back">Πίσω</string>
@@ -102,6 +103,7 @@
     <string name="measurement_units">Μονάδες μέτρησης</string>
     <!-- Detailed description of Measurement Units settings button -->
     <string name="measurement_units_summary">Επιλέξετε ανάμεσα σε μίλια και χιλιόμετρα</string>
+
     <!-- SECTION: Search categories -->
     <!-- Search category for cafes, bars, restaurants; any changes should be duplicated in categories.txt @category_eat! -->
     <string name="category_eat">Μέρη για φαγητό</string>
@@ -147,6 +149,7 @@
     <string name="category_water">Νερό</string>
     <!-- Search category for RV facilities; any changes should be duplicated in categories.txt @category_rv! -->
     <string name="category_rv">Για RV</string>
+
     <!-- SECTION: Other translations -->
     <!-- Notes field in Bookmarks view -->
     <string name="description">Σημειώσεις</string>
@@ -251,6 +254,26 @@
     <string name="website">Ιστότοπος</string>
     <!-- Text in About menu, opens Organic Maps news website -->
     <string name="news">Νέα</string>
+    <!-- Text in menu -->
+    <string name="github">GitHub</string>
+    <!-- Text in menu -->
+    <string name="telegram">Telegram</string>
+    <!-- Text in menu -->
+    <string name="matrix">Μήτρα</string>
+    <!-- Text in menu -->
+    <string name="mastodon">Mastodon</string>
+    <!-- Text in menu -->
+    <string name="facebook">Facebook</string>
+    <!-- Text in menu -->
+    <string name="twitter">X (Twitter)</string>
+    <!-- Text in menu -->
+    <string name="instagram">Instagram</string>
+    <!-- Text in the editor -->
+    <string name="vk">VK</string>
+    <!-- Text in the editor -->
+    <string name="editor_line_social_network">LINE</string>
+    <!-- Text in menu -->
+    <string name="openstreetmap">OpenStreetMap</string>
     <!-- Settings: Send feedback button and dialog title -->
     <string name="feedback">Σχόλια</string>
     <!-- Text in menu -->
@@ -347,6 +370,7 @@
     <string name="gray">Γκρι</string>
     <!-- blue gray color -->
     <string name="blue_gray">Γκρίζο μπλε</string>
+
     <!-- SECTION: Routing dialogs strings -->
     <string name="dialog_routing_disclaimer_title">Όταν ακολουθείτε την διαδρομή, να θυμάστε:</string>
     <string name="dialog_routing_disclaimer_priority">- Οι οδικές συνθήκες, οι κανόνες οδικής κυκλοφορίας και οι πινακίδες έχουν πάντα προτεραιότητα έναντι των συμβουλών πλοήγησης;</string>
@@ -376,6 +400,7 @@
     <string name="not_now">Όχι τώρα</string>
     <string name="dialog_routing_download_and_build_cross_route">Θέλετε να κατεβάσετε το χάρτη και να δημιουργήσετε μια πιο βέλτιστη διαδρομή που εκτείνεται σε περισσότερους από έναν χάρτες;</string>
     <string name="dialog_routing_download_cross_route">Κατεβάστε επιπλέον χάρτες για να δημιουργηθεί μια καλύτερη διαδρομή που διασχίζει τα όρια αυτού του χάρτη.</string>
+
     <!-- SECTION: Strings for downloading map from search -->
     <string name="search_without_internet_advertisement">Για να ξεκινήσετε την αναζήτηση και τη δημιουργία διαδρομών, κατεβάστε το χάρτη. Μετά από αυτό δεν θα χρειάζεστε πλέον σύνδεση στο Internet.</string>
     <string name="search_select_map">Επιλογή χάρτη</string>
@@ -393,6 +418,8 @@
     <string name="clear_search">Εκκαθάριση ιστορικού αναζητήσεων</string>
     <!-- Place Page link to Wikipedia article (if map object has it). -->
     <string name="read_in_wikipedia">Βικιπέδια</string>
+    <!-- Place Page link to Wikimedia Commons. -->
+    <string name="wikimedia_commons">Κοινά της Wikimedia</string>
     <string name="p2p_your_location">Η τοποθεσία σας</string>
     <string name="p2p_start">Έναρξη</string>
     <string name="p2p_from_here">Διαδρομή από</string>
@@ -466,6 +493,8 @@
     <string name="email_or_username">Email ή όνομα χρήστη</string>
     <string name="editor_add_phone">Προσθήκη Τηλεφώνου</string>
     <string name="level">Όροφος</string>
+    <!-- Building level -->
+    <string name="level_value_generic">Όροφος: %s</string>
     <string name="downloader_delete_map_dialog">Όλες οι αλλαγές που έχετε κάνει στο χάρτη θα διαγραφούν μαζί με το χάρτη.</string>
     <string name="downloader_update_maps">Ενημέρωση χαρτών</string>
     <string name="downloader_mwm_migration_dialog">Για να δημιουργήσετε μια διαδρομή, πρέπει να ενημερώσετε όλους τους χάρτες και στη συνέχεια να σχεδιάσετε τη διαδρομή ξανά.</string>
@@ -521,7 +550,12 @@
     <string name="current_location_unknown_error_title">Η τρέχουσα τοποθεσία είναι άγνωστη.</string>
     <!-- abbreviation for kilometers per hour -->
     <string name="kilometers_per_hour">χμ/ω</string>
+    <string name="miles_per_hour">mph</string>
+    <string name="hour">Ωρα</string>
+    <string name="minute">λπτ</string>
+    <string name="day">Μέρα</string>
     <string name="placepage_more_button">Περισσότερα</string>
+    <!-- A disable button text in the explanation dialog that opens hotel details page on Kayak website. -->
     <string name="placepage_edit_bookmark_button">Επεξεργασία αγαπημένου</string>
     <string name="placepage_personal_notes_hint">Προσωπικές σημειώσεις (κείμενο ή html)</string>
     <string name="editor_comment_hint">Σχόλιο…</string>
@@ -542,6 +576,8 @@
     <string name="error_enter_correct_vk_page">Εισάγεται μια έγκυρη διεύθυνση VK</string>
     <string name="error_enter_correct_line_page">Εισάγεται μια έκγυρη διεύθυνση LIME</string>
     <string name="placepage_add_place_button">Προσθήκη τοποθεσίας στο OpenStreetMap</string>
+    <string name="osm_note_hint">Ή, εναλλακτικά, αφήστε μια σημείωση προς την κοινότητα του OpenStreetMap ώστε κάποιος άλλος να μπορεί να προσθέσει ή να διορθώσει ένα μέρος εδώ.</string>
+    <string name="osm_note_toast">Η σημείωση θα αποσταλεί στο OpenStreetMap</string>
     <!-- Displayed when saving some edits to the map to warn against publishing personal data -->
     <string name="editor_share_to_all_dialog_title">Θέλετε να το στείλετε σε όλους τους χρήστες;</string>
     <!-- Dialog before publishing the modifications to the public map. -->
@@ -586,10 +622,11 @@
     <string name="button_plan">Σχεδιασμός</string>
     <string name="placepage_remove_stop">Αφαίρεση στάσης</string>
     <string name="placepage_add_stop">Προσθήκη στάσης</string>
+    <string name="saved">Αποθηκεύτηκε</string>
     <!-- Alert to ask user relogin to OpenStreetMap with OAuth2 flow after OAuth1 authentication is deprecated. -->
     <string name="alert_reauth_message">Παρακαλούμε συνδεθείτε στο OpenStreetMap για να ανεβάσετε αυτόματα όλες τις επεξεργασίες του χάρτη σας. Μάθετε περισσότερα <a href="https://github.com/organicmaps/organicmaps/issues/6144">εδώ</a>.</string>
     <string name="dialog_error_storage_title">Πρόβλημα πρόσβασης στον αποθηκευτικό χώρο</string>
-    <string name="dialog_error_storage_message">Η εξωτερική αποθήκευση δεν είναι προσβάσιμη. Η κάρτα SD μπορεί να έχει αφαιρεθεί, να έχει υποστεί ζημιά ή το σύστημα αρχείων να είναι μόνο για ανάγνωση. Ελέγξτε την κάρτα SD ή επικοινωνήστε μαζί μας στο support@organicmaps.app</string>
+    <string name="dialog_error_storage_message">Η εξωτερική αποθήκευση δεν είναι προσβάσιμη. Η κάρτα SD μπορεί να έχει αφαιρεθεί, να έχει υποστεί ζημιά ή το σύστημα αρχείων να είναι μόνο για ανάγνωση. Ελέγξτε την κάρτα SD ή επικοινωνήστε μαζί μας στο support\@organicmaps.app</string>
     <string name="setting_emulate_bad_storage">Εξομείωση κακού αποθηκευτικού χώρου</string>
     <string name="error_enter_correct_name">Εισάγετε ένα σωστό όνομα</string>
     <string name="bookmark_lists">Λίστες</string>
@@ -628,6 +665,10 @@
     <string name="privacy_policy">Πολιτική απορρήτου</string>
     <string name="terms_of_use">Όροι χρήσης</string>
     <string name="button_layer_traffic">Κίνηση</string>
+    <!-- Hiking routes layer name in the Styles and Layers dialog -->
+    <string name="button_layer_hiking">Πεζοπορία</string>
+    <!-- Cycling routes layer name in the Styles and Layers dialog -->
+    <string name="button_layer_cycling">Ποδηλασία</string>
     <string name="button_layer_subway">Μετρό</string>
     <string name="layers_title">Στυλ χάρτη και επίπεδα</string>
     <string name="bookmarks_empty_list_title">Η λίστα είναι άδεια</string>
@@ -651,6 +692,11 @@
     <string name="power_managment_setting_never">Ποτέ</string>
     <string name="power_managment_setting_auto">Αυτόματα</string>
     <string name="power_managment_setting_manual_max">Πάντα</string>
+    <!-- Settings/Bookmark Text Placement -->
+    <string name="bookmarks_text_placement_title">Ονόματα σελιδοδεικτών στο χάρτη</string>
+    <string name="bookmarks_text_placement_description">Εάν έχετε πάρα πολλούς σελιδοδείκτες, η προβολή των ονομάτων τους στο χάρτη θα κάνει αργή την εφαρμογή.</string>
+    <string name="show_to_the_right">Εμφάνισε στα δεξιά</string>
+    <string name="show_at_the_bottom">Εμφάνισε στο κάτω μέρος</string>
     <string name="enable_logging_warning_message">Αυτή η λειτουργία είναι ενεργοποιημένη για την καταγραφή ενεργειών για διαγνωστικούς σκοπούς. Αυτό βοηθά την ομάδα να εντοπίζει προβλήματα με την εφαρμογή. Να ενεργοποιείτε τη λειτουργία μόνο κατόπιν αιτήματος της υποστήριξης του Organic Maps.</string>
     <string name="driving_options_title">Ρυθμίσεις δρομολόγησης</string>
     <!-- Recommended length for CarPlay and Android Auto is around 25-27 characters -->
@@ -701,6 +747,7 @@
     <string name="moreyear_ago_sorttype">Περισσότερο από ένα χρόνο πριν</string>
     <string name="near_me_sorttype">Δίπλα μου</string>
     <string name="others_sorttype">Άλλα</string>
+
     <!-- SECTION: Bookmark types used for sorting -->
     <string name="food_places">Φαγητό</string>
     <string name="tourist_places">Αξιοθέατα</string>
@@ -754,8 +801,18 @@
     <string name="change_map_locale">Γλώσσα χάρτη</string>
     <!-- OpenStreetMap text on splash screen -->
     <string name="splash_subtitle">Δεδομένα χάρτη από το OpenStreetMap</string>
+    <!-- Telegram group url for the "?" About page -->
+    <string name="telegram_url">https://t.me/OrganicMapsApp</string>
+    <!-- Instagram account url for the "?" About page -->
+    <string name="instagram_url">https://www.instagram.com/organicmaps.app</string>
+    <!-- A link to the TTS FAQ -->
+    <string name="tts_info_link">https://organicmaps.app/faq/text-to-speech-android-tts/</string>
+    <!-- Translated Organic Maps site, add new translations here: https://github.com/organicmaps/organicmaps.github.io/tree/master/content -->
+    <string name="translated_om_site_url">https://organicmaps.app/</string>
     <!-- Link to OSM wiki for Editor, Profile and About pages -->
     <string name="osm_wiki_about_url">https://wiki.openstreetmap.org/wiki/El:About_OpenStreetMap</string>
+    <!-- A number of bookmarks and a number of tracks, separated by comma, like: 1 bookmark, 5 tracks -->
+    <string name="comma_separated_pair">%1$s, %2$s</string>
     <!-- App Tip #00 -->
     <string name="app_tip_00">Σας ευχαριστούμε που χρησιμοποιείτε τους χάρτες μας που δημιουργήθηκαν από την κοινότητα!</string>
     <!-- App tip #01 -->
@@ -828,6 +885,8 @@
     <!-- Prompt for stopping a track recording. -->
     <string name="stop_track_recording">Σταματήστε την εγγραφή διαδρομής</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
+    <string name="track_recording_title">Καταγραφή διαδρομής</string>
+    <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="stop_without_saving">Σταματήστε χωρίς αποθήκευση</string>
     <!-- Title for the "Stop Without Saving" action for the alert when saving a track recording. -->
     <string name="continue_recording">Συνέχεια εγγραφής</string>
@@ -842,37 +901,7 @@
     <string name="uri_open_location_failed">Δεν υπάρχει εγκατεστημένη εφαρμογή που να μπορεί να ανοίξει την τοποθεσία</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Αυτόματη πλοήγηση</string>
-    <string name="wikimedia_commons">Κοινά της Wikimedia</string>
-    <string name="twitter">X (Twitter)</string>
-    <string name="instagram">Instagram</string>
-    <string name="telegram_url">https://t.me/OrganicMapsApp</string>
-    <string name="comma_separated_pair">%1$s, %2$s</string>
-    <string name="instagram_url">https://www.instagram.com/organicmaps.app</string>
-    <string name="facebook">Facebook</string>
-    <string name="translated_om_site_url">https://organicmaps.app/</string>
-    <string name="github">GitHub</string>
-    <string name="mastodon">Mastodon</string>
-    <string name="editor_line_social_network">LINE</string>
-    <string name="tts_info_link">https://organicmaps.app/faq/text-to-speech-android-tts/</string>
-    <string name="level_value_generic">Όροφος: %s</string>
-    <string name="miles_per_hour">mph</string>
-    <string name="openstreetmap">OpenStreetMap</string>
-    <string name="minute">λπτ</string>
-    <string name="day">Μέρα</string>
-    <string name="hour">Ωρα</string>
-    <string name="matrix">Μήτρα</string>
-    <string name="vk">VK</string>
-    <string name="telegram">Telegram</string>
-    <string name="saved">Αποθηκεύτηκε</string>
-    <string name="osm_note_hint">Ή, εναλλακτικά, αφήστε μια σημείωση προς την κοινότητα του OpenStreetMap ώστε κάποιος άλλος να μπορεί να προσθέσει ή να διορθώσει ένα μέρος εδώ.</string>
-    <string name="osm_note_toast">Η σημείωση θα αποσταλεί στο OpenStreetMap</string>
-    <string name="button_layer_hiking">Πεζοπορία</string>
-    <string name="button_layer_cycling">Ποδηλασία</string>
-    <string name="bookmarks_text_placement_title">Ονόματα σελιδοδεικτών στο χάρτη</string>
-    <string name="bookmarks_text_placement_description">Εάν έχετε πάρα πολλούς σελιδοδείκτες, η προβολή των ονομάτων τους στο χάρτη θα κάνει αργή την εφαρμογή.</string>
-    <string name="show_to_the_right">Εμφάνισε στα δεξιά</string>
-    <string name="show_at_the_bottom">Εμφάνισε στο κάτω μέρος</string>
+    <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">Κοινοποίηση ίχνους</string>
     <string name="delete_track_dialog_title">Διαγραφή %s;</string>
-    <string name="track_recording_title">Καταγραφή διαδρομής</string>
 </resources>
