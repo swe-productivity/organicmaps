@@ -1,2 +1,10 @@
-"placepage_distance" = "Distance";
+
+
+/********** Strings **********/
+
 "you" = "Εσείς";
+
+
+/********** Other translations **********/
+
+"placepage_distance" = "Απόσταση";

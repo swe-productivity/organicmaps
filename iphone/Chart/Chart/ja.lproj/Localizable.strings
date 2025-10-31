@@ -1,2 +1,10 @@
-"placepage_distance" = "距離";
+
+
+/********** Strings **********/
+
 "you" = "君";
+
+
+/********** Other translations **********/
+
+"placepage_distance" = "距離";
