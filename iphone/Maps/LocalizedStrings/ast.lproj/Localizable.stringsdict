@@ -16,9 +16,9 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>one</key>
-			<string>%d bogmærke</string>
+			<string>%d bookmark</string>
 			<key>other</key>
-			<string>%d bogmærker</string>
+			<string>%d bookmarks</string>
 		</dict>
 	</dict>
 
@@ -33,9 +33,9 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>one</key>
-			<string>%d fil blev fundet. Du vil se det efter konvertering.</string>
+			<string>%d file was found. You can see it after conversion.</string>
 			<key>other</key>
-			<string>%d filer blev fundet. Du vil se dem efter konvertering.</string>
+			<string>%d files were found. You can see them after conversion.</string>
 		</dict>
 	</dict>
 
@@ -50,9 +50,9 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>one</key>
-			<string>%d spor</string>
+			<string>%d trayeutu</string>
 			<key>other</key>
-			<string>%d spor</string>
+			<string>%d trayeutos</string>
 		</dict>
 	</dict>
 

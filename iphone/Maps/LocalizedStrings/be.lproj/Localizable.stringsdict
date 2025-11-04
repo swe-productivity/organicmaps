@@ -2,6 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+
+<!-- ********** Strings for downloading map from search **********/ -->
+
 	<key>bookmarks_places</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -12,16 +15,17 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
-			<key>zero</key>
-			<string>%d закладак</string>
 			<key>one</key>
 			<string>%d закладка</string>
 			<key>few</key>
 			<string>%d закладкі</string>
 			<key>many</key>
 			<string>%d закладак</string>
+			<key>other</key>
+			<string>%d закладак</string>
 		</dict>
 	</dict>
+
 	<key>bookmarks_detect_message</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -33,15 +37,18 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>%d файлаў знойдзена. Вы можаце ўбачыць іх пасля канвертавання.</string>
+			<string>Знойдзена %d файлаў.</string>
 			<key>one</key>
-			<string>%d файл знойдзены. Вы можаце ўбачыць яго пасля канвертавання.</string>
+			<string>Знойдзены %d файл. Вы можаце ўбачыць яго пасля пераўтварэння.</string>
 			<key>few</key>
-			<string>%d файлы знойдзеныя. Вы можаце ўбачыць іх пасля канвертавання.</string>
+			<string>Знойдзена %d файлы. Вы можаце ўбачыць іх пасля пераўтварэння.</string>
 			<key>many</key>
-			<string>%d файлаў знойдзеная. Вы можаце ўбачыць іх пасля канвертавання.</string>
+			<string>Знойдзена %d файлаў. Вы можаце ўбачыць іх пасля пераўтварэння.</string>
+			<key>other</key>
+			<string>Знойдзена %d файлаў. Вы можаце ўбачыць іх пасля пераўтварэння.</string>
 		</dict>
 	</dict>
+
 	<key>tracks</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -52,15 +59,16 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
-			<key>zero</key>
-			<string>%d сцежак</string>
 			<key>one</key>
-			<string>%d сцежка</string>
+			<string>%d маршрут</string>
 			<key>few</key>
-			<string>%d сцежкі</string>
+			<string>%d маршруты</string>
 			<key>many</key>
-			<string>%d сцежак</string>
+			<string>%d маршрутаў</string>
+			<key>other</key>
+			<string>%d маршрутаў</string>
 		</dict>
 	</dict>
+
 </dict>
 </plist>
