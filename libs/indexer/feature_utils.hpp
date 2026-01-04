@@ -19,6 +19,8 @@ static constexpr std::string_view kWheelchairSymbol = "♿";
 static constexpr std::string_view kWifiSymbol = "🛜";
 static constexpr std::string_view kCarSymbol = "🚘";
 static constexpr std::string_view kBicycleSymbol = "🚲";
+static constexpr std::string_view kMotorcycleSymbol = "🏍";
+static constexpr std::string_view kLevelSymbol = "🛗";
 
 /// OSM internet_access tag values.
 enum class Internet
@@ -185,5 +187,8 @@ std::string FormatElevation(std::string_view elevation);
 
 /// @returns formatted capacity with car/bicycle emoji.
 std::string FormatCapacity(std::string_view capacity, TypesHolder const & types);
+
+/// @returns formatted building level with level symbol.
+std::string FormatLevel(std::string_view level);
 
 }  // namespace feature

@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">情報</string>
     <string name="prefs_group_route">ナビゲーション</string>
-    <string name="pref_zoom_title">ズームボタン</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">地図上の「+」と「-」ボタン</string>
     <string name="pref_zoom_summary">画面上に表示</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">夜間モード</string>
@@ -865,6 +866,8 @@
     <string name="uri_open_location_failed">場所を開けるアプリがインストールされていません</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">ナビゲーションオート</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">システムに従う</string>
     <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">シェアトラック</string>
     <!-- Title for the dialog when deleting a track with the track name passed in %@ -->

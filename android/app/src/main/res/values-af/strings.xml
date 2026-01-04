@@ -199,7 +199,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Inligting</string>
     <string name="prefs_group_route">Navigasie</string>
-    <string name="pref_zoom_title">Zoemknoppe</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Knoppies + en - op die kaart</string>
     <string name="pref_zoom_summary">Vertoon op die kaart</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Nagmodus</string>
@@ -790,4 +791,6 @@
     <string name="uri_open_location_failed">Geen toepassing geïnstalleer wat die ligging kan oopmaak nie</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Outo in navigasie</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Volg die stelsel</string>
 </resources>

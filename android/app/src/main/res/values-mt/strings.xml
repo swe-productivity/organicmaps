@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Informazzjoni</string>
     <string name="prefs_group_route">Navigazzjoni</string>
-    <string name="pref_zoom_title">Buttuni taż-żum</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Il-buttuni + u - fuq il-mappa</string>
     <string name="pref_zoom_summary">Uri fuq il-mappa</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Il-mod ta’ bil-lejl</string>
@@ -831,4 +832,6 @@
     <string name="uri_open_location_failed">Ebda applikazzjoni installata li tista’ tiftaħ il-post</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Auto fin-navigazzjoni</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Segwi s-sistema</string>
 </resources>

@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Informācija</string>
     <string name="prefs_group_route">Navigācija</string>
-    <string name="pref_zoom_title">Tālummaiņas pogas</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Pogas \"+\" un \"-\" kartē</string>
     <string name="pref_zoom_summary">Rādīt kartē</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Tumšais motīvs</string>
@@ -867,6 +868,8 @@
     <string name="uri_open_location_failed">Nav uzstādīta neviena lietotne, kas varētu atvērt atrašanās vietu</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Automātisks navigācijas laikā</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Sekot sistēmai</string>
     <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">Koplietošanas trase</string>
     <!-- Title for the dialog when deleting a track with the track name passed in %@ -->

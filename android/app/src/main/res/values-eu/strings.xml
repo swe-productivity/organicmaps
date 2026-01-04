@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Informazioa</string>
     <string name="prefs_group_route">Nabigazioa</string>
-    <string name="pref_zoom_title">Zoom botoiak</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Mapako “+” eta “-” botoiak</string>
     <string name="pref_zoom_summary">Erakutsi mapan</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Gaueko modua</string>
@@ -868,6 +869,8 @@
     <string name="uri_open_location_failed">Ez dago kokapena ireki dezakeen aplikaziorik instalatuta</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Nabigazioan automatikoa</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Jarraitu sistemari</string>
     <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">Partekatu arrastoa</string>
     <!-- Title for the dialog when deleting a track with the track name passed in %@ -->

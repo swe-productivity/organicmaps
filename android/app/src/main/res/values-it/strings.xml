@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Informazioni</string>
     <string name="prefs_group_route">Navigazione</string>
-    <string name="pref_zoom_title">Pulsanti zoom</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Pulsanti «+» e «-» sulla mappa</string>
     <string name="pref_zoom_summary">Mostra sulla mappa</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Modalità notte</string>
@@ -873,6 +874,8 @@
     <string name="uri_open_location_failed">Non trovo app che possano aprire la posizione</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Automatica durante la navigazione</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Segui il sistema</string>
     <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">Condividi traccia</string>
     <!-- Title for the dialog when deleting a track with the track name passed in %@ -->

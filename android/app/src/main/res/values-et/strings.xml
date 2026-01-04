@@ -201,7 +201,8 @@
     <!-- Settings information group in settings screen -->
     <string name="prefs_group_information">Teave</string>
     <string name="prefs_group_route">Tee juhatamine</string>
-    <string name="pref_zoom_title">Suuminupud</string>
+    <!-- Setting name which enables or disables zoom buttons on the map screen. -->
+    <string name="pref_zoom_title">Nupud „+” ja „-” kaardil</string>
     <string name="pref_zoom_summary">Kuva kaardil</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Öörežiim</string>
@@ -871,6 +872,8 @@
     <string name="uri_open_location_failed">Ei ole paigaldatud rakendust, mis oskaks asukohta avada</string>
     <!-- preference string for using auto theme only in navigation mode -->
     <string name="nav_auto">Automaatne tee juhatamine</string>
+    <!-- Setting option to sync the app's theme with the operating system's dark/light mode -->
+    <string name="follow_system">Järgi süsteemi</string>
     <!-- Title of the bottom sheet when sharing the track -->
     <string name="share_track">Jaga rada</string>
     <!-- Title for the dialog when deleting a track with the track name passed in %@ -->
