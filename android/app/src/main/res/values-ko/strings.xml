@@ -475,7 +475,7 @@
     <string name="editor_add_place_title">첨가 중</string>
     <string name="editor_edit_place_name_hint">장소 이름</string>
     <!-- The second part of the editor_edit_place_name_hint to explain that name should be entered in a local language, see https://wiki.openstreetmap.org/wiki/Key:name -->
-    <string name="editor_default_language_hint">현지 언어로 작성되었으므로</string>
+    <string name="editor_default_language_hint">현지 언어</string>
     <string name="editor_edit_place_category_title">범주</string>
     <string name="detailed_problem_description">문제에 대한 자세한 설명</string>
     <string name="editor_report_problem_other_title">다른 문제</string>
@@ -636,8 +636,12 @@
     <string name="bookmarks_empty_list_title">이 목록은 비어있습니다.</string>
     <string name="bookmarks_empty_list_message">북마크를 추가하려면 맵에서 장소를 탭하고 별 모양 아이콘을 탭하세요.</string>
     <string name="category_desc_more">…기타 정보</string>
+    <!-- Menu title for exporting a file in the default KMZ format -->
     <string name="export_file">KMZ 내보내기</string>
+    <!-- Menu title for exporting a file in GPX format -->
     <string name="export_file_gpx">GPX 내보내기</string>
+    <!-- Menu title for exporting a file in GeoJSON format -->
+    <string name="export_file_geojson">GeoJSON 내보내기</string>
     <string name="delete_list">리스트 삭제</string>
     <string name="speedcams_alert_title">속도 감시 카메라</string>
     <string name="place_description_title">장소 묘사</string>

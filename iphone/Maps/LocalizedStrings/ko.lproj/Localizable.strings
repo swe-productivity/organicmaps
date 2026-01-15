@@ -530,7 +530,7 @@
 "editor_edit_place_name_hint" = "장소 이름";
 
 /* The second part of the editor_edit_place_name_hint to explain that name should be entered in a local language, see https://wiki.openstreetmap.org/wiki/Key:name */
-"editor_default_language_hint" = "현지 언어로 작성되었으므로";
+"editor_default_language_hint" = "현지 언어";
 "editor_edit_place_category_title" = "범주";
 "message_invalid_feature_position" = "목적지를 이곳에서 찾을 수 없습니다";
 
@@ -650,8 +650,15 @@
 "button_layer_cycling" = "사이클링";
 "button_layer_subway" = "지하철";
 "layers_title" = "맵 스타일 및 레이어";
+
+/* Menu title for exporting a file in the default KMZ format */
 "export_file" = "KMZ 내보내기";
+
+/* Menu title for exporting a file in GPX format */
 "export_file_gpx" = "GPX 내보내기";
+
+/* Menu title for exporting a file in GeoJSON format */
+"export_file_geojson" = "GeoJSON 내보내기";
 "delete_list" = "리스트 삭제";
 "speedcams_alert_title" = "속도 감시 카메라";
 "place_description_title" = "장소 묘사";
