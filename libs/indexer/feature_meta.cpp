@@ -1,7 +1,7 @@
 #include "indexer/feature_meta.hpp"
 #include "custom_keyvalue.hpp"
-
 #include "std/target_os.hpp"
+#include "timezone/serdes.hpp"
 
 namespace feature
 {
@@ -204,6 +204,9 @@ void Metadata::ClearPOIAttribs()
 
 void RegionData::SetLanguages(vector<string> const & codes)
 {
+  if (!MetadataBase::Get(RegionData::Type::RD_LANGUAGES).empty())
+    return;
+
   string value;
   for (string const & code : codes)
   {
@@ -211,6 +214,7 @@ void RegionData::SetLanguages(vector<string> const & codes)
     if (lang != StringUtf8Multilang::kUnsupportedLanguageCode)
       value.push_back(lang);
   }
+
   MetadataBase::Set(RegionData::Type::RD_LANGUAGES, value);
 }
 
@@ -242,6 +246,25 @@ void RegionData::AddPublicHoliday(int8_t month, int8_t offset)
   value.push_back(month);
   value.push_back(offset);
   Set(RegionData::Type::RD_PUBLIC_HOLIDAYS, std::move(value));
+}
+
+void RegionData::LoadTimeZone()
+{
+  if (auto res = om::tz::Deserialize(Get(RD_TIMEZONE)))
+    m_timeZone = std::move(res.value());
+  else
+    LOG(LWARNING, ("Failed to read timezone info:", res.error()));
+}
+
+void RegionData::MergeFrom(RegionData const & rhs)
+{
+  for (int i = 0; i < RD_COUNT; ++i)
+  {
+    auto const k = static_cast<RegionData::Type>(i);
+    if (Get(k).empty())
+      if (auto v = rhs.Get(k); !v.empty())
+        MetadataBase::Set(k, std::string(v));
+  }
 }
 
 // Warning: exact osm tag keys should be returned for valid enum values.

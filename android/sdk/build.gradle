@@ -70,6 +70,10 @@ android {
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
+  packagingOptions{
+      doNotStrip "**/liborganicmaps.so"
+  }
+
   externalNativeBuild {
     cmake {
       version = '3.22.1+'
