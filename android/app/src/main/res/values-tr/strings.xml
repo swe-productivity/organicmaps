@@ -204,6 +204,7 @@
     <!-- Setting name which enables or disables zoom buttons on the map screen. -->
     <string name="pref_zoom_title">Haritadaki + ve - düğmeleri</string>
     <string name="pref_zoom_summary">Haritada göster</string>
+    <string name="pref_auto_night_in_navigation_title">Karanlıkta navigasyon yaparken gece stili</string>
     <!-- Settings «Map» category: «Night style» title -->
     <string name="pref_map_style_title">Gece Modu</string>
     <!-- Generic «Off» string -->
@@ -337,6 +338,12 @@
     <string name="gray">Gri</string>
     <!-- blue gray color -->
     <string name="blue_gray">Mavi Gri</string>
+    <!-- Settings «Map» category: «Appearance» title -->
+    <string name="pref_appearance_title">Görünüm</string>
+    <!-- Settings "Appearance" category: "Light" title, should be consistent with the pref_appearance_title translation. -->
+    <string name="pref_appearance_light">Açık</string>
+    <!-- Settings "Appearance" category: "Dark" title, should be consistent with the pref_appearance_title translation. -->
+    <string name="pref_appearance_dark">Koyu</string>
     <!-- Tex label above the Donate button -->
     <string name="donate_description">Milyonlarca kullanıcıya reklamsız ve ücretsiz haritalar hediye edin!</string>
 
@@ -780,7 +787,7 @@
     <!-- Instagram account url for the "?" About page -->
     <string name="instagram_url">https://www.instagram.com/organicmapstr</string>
     <!-- A link to the TTS FAQ -->
-    <string name="tts_info_link">https://organicmaps.app/faq/text-to-speech-android-tts/</string>
+    <string name="tts_info_link">https://organicmaps.app/tr/faq/voice/text-to-speech-android-tts/</string>
     <!-- Include only languages supported on the website, add new translations here: https://github.com/organicmaps/website/tree/master/content -->
     <string name="translated_om_site_url">https://organicmaps.app/tr/</string>
     <!-- Link to OSM wiki for Editor, Profile and About pages -->

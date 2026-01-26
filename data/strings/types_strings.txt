@@ -2188,6 +2188,7 @@ sq = Studio
 tr = Atölye
 uk = Студія
 zh-Hans = 演播厅
+zh-Hant = 錄音室
 
 [type.leisure.bowling_alley]
 en = Bowling Alley
@@ -14747,6 +14748,7 @@ sv = €
 tr = ₺
 uk = $
 zh-Hans = ¥
+zh-Hant = $
 
 [type.fee.no]
 en = Free
@@ -24123,6 +24125,7 @@ sv = Bergspass
 tr = Boğaz
 uk = Перевал
 zh-Hans = 山口
+zh-Hant = 隘口
 
 [type.natural]
 en = Nature
@@ -28152,7 +28155,7 @@ th = โรงไฟฟ้าถ่านหิน
 tr = Kömür Santrali
 uk = Вугільна електростанція
 vi = Nhà máy điện than
-zh-Hans = 燃煤电厂
+zh-Hans = 燃煤发电厂
 zh-Hant = 燃煤電廠
 
 [type.power.plant.gas]
@@ -28622,6 +28625,7 @@ sv = Kollektivtrafik
 tr = Toplu Taşıma
 uk = Громадський транспорт
 zh-Hans = 公共交通要素
+zh-Hant = 大眾運輸
 
 [type.public_transport.platform]
 en = Platform
@@ -28658,6 +28662,7 @@ sv = Perrong
 tr = Platform
 uk = Платформа
 zh-Hans = 公共交通站台
+zh-Hant = 月台
 
 [type.railway]
 en = Railway
@@ -28911,6 +28916,41 @@ uk = Недійсна залізниця
 zh-Hans = 废弃铁路
 zh-Hant = 不使用鐵路
 
+[type.railway.disused.bridge]
+en = Disused Railway Bridge
+af = Ongebruikte spoorbrug
+az = İstifadəsiz dəmir yolu körpüsü
+be = Закінуты чыгуначны мост
+ca = Pont ferroviari en desús
+cs = Most nepoužívané železnice
+da = Ubenyttet jernbanebro
+de = Stillgelegte Eisenbahnbrücke
+el = Αχρησιμοποίητη σιδηροδρομική γέφυρα
+es = Puente ferroviario en desuso
+et = Kasutamata raudteesild
+fa = پل راه‌آهن رها شده
+fr = Pont ferroviaire désaffecté
+gl = Ponte ferroviario en desuso
+he = גשר רכבת לא בשימוש
+hu = Használaton kívüli vasúti híd
+is = Aflögð járnbrautarbrú
+it = Ponte ferroviario in disuso
+ja = 休止線(橋)
+lt = Nenaudojamo geležinkelio tiltas
+nl = Ongebruikte spoorbrug
+pl = Nieczynny most kolejowy
+pt = Ponte de Ferrovia em desuso
+ru = Заброшенный железнодорожный мост
+sk = Nepoužívaný železničný most
+sl = Neuporabljen železniški most
+sq = Urë hekurudhore jashtë përdorimit
+sr = Напуштен железнички мост
+sv = Otrafikerad järnvägsbro
+tr = Kullanılmayan Demir Yolu Köprüsü
+uk = Недіючий залізничний міст
+zh-Hans = 废弃铁路桥梁
+zh-Hant = 廢棄鐵路橋樑
+
 [type.railway.funicular]
 en = Funicular
 af = Kabelspoor
@@ -28991,7 +29031,7 @@ sq = Urë funikulari
 sr = Мост успињаче
 tr = Füniküler Köprüsü
 uk = Фунікулер
-zh-Hans = 悬链线桥‌
+zh-Hans = 缆车桥
 zh-Hant = 纜車橋
 
 [type.railway.funicular.tunnel]
@@ -29027,7 +29067,7 @@ sr = Тунел успињаче
 sv = Bergbanetunnel
 tr = Füniküler Tüneli
 uk = Фунікулер
-zh-Hans = 缆索隧道
+zh-Hans = 缆车隧道
 zh-Hant = 纜車隧道
 
 [type.railway.halt]
@@ -29279,7 +29319,7 @@ sq = Urë monorail
 sr = Једношински мост
 tr = Monoray Köprüsü
 uk = Монорейкова залізниця
-zh-Hans = 单轨桥梁‌
+zh-Hans = 单轨桥梁
 zh-Hant = 單軌軌道
 
 [type.railway.monorail.tunnel]
@@ -31498,8 +31538,8 @@ en = Metro Station Entrance
 bg = Вход на метростанция
 it = Stazione metropolitana
 sl = Vhod v postajo podzemne železnice
-
 sq = Hyrje stacioni metroje
+
 [type.railway.subway_entrance.lyon]
 ref = type.railway.subway_entrance
 bg = Вход ма метро
@@ -41326,6 +41366,7 @@ sv = Damm
 tr = Baraj
 uk = Дамба
 zh-Hans = 水坝
+zh-Hant = 水壩
 
 [type.barrier.ditch]
 en = Ditch
@@ -43260,6 +43301,7 @@ sl = Mala vrata
 sq = Portë e vogël
 tr = Kuzu Kapı
 uk = Ворота-хвіртка
+zh-Hans = 检票口
 zh-Hant = 大門人行入口
 
 [type.barrier.yes]
@@ -43283,6 +43325,7 @@ sl = Ovira
 sq = Barrierë
 tr = Bariyer
 uk = Бар'єр
+zh-Hans = 路障
 zh-Hant = 障礙物
 
 [type.building.guardhouse]
@@ -43306,6 +43349,7 @@ sl = Varnostnik
 sq = Roje
 tr = Güvenlik
 uk = Охоронець
+zh-Hans = 警卫岗
 zh-Hant = 警衛
 
 [type.office.security]
@@ -43328,6 +43372,7 @@ sl = Varnostna pisarna
 sq = Zyrë sigurie
 tr = Güvenlik Bürosu
 uk = Офіс безпеки
+zh-Hans = 安保室
 zh-Hant = 保全辦公室
 
 [type.power.portal]
@@ -43347,6 +43392,7 @@ sl = Daljnovodni stolp (portal)
 sq = Shtyllë tensioni
 tr = Elektrik Kulesi (Geçit)
 uk = Силова вежа (Портал)
+zh-Hans = 门型电塔
 zh-Hant = H架電塔
 
 [type.shop.lighting]
@@ -43370,6 +43416,8 @@ sl = Trgovina s svetili
 sq = Dyqan ndriçimi
 tr = Aydınlatma Mağazası
 uk = Магазин освітлення
+zh-Hans = 灯具店
+zh-Hant = 燈具店
 
 [type.barrier.jersey_barrier]
 en = Block
