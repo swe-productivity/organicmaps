@@ -9,6 +9,11 @@
   <dimen name="nav_bottom_gap">24dp</dimen>
   <dimen name="zoom_buttons_margin">48dp</dimen>
 
+  <!-- 320x640 -->
+  <dimen name="elevation_profile_peek_height">72dp</dimen>
+  <dimen name="elevation_profile_chart_min_height">64dp</dimen>
+  <dimen name="elevation_profile_content_height">64dp</dimen>
+  
   <!-- Altitude chart -->
   <dimen name="altitude_chart_image_width">334dp</dimen>
 

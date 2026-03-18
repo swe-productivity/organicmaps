@@ -37,6 +37,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_alignParentEnd="true"
+    android:layout_above="@id/map_buttons_bottom"
     android:layout_below="@+id/map_buttons_top"
     android:clipChildren="false"
     android:clipToPadding="false"
