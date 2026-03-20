@@ -70,12 +70,15 @@ final class PlaceholderView: UIView {
     titleLabel.text = title
     titleLabel.setFontStyle(.medium16, color: .blackPrimary)
     titleLabel.textAlignment = .center
+    subtitleLabel.numberOfLines = 0
+    titleLabel.lineBreakMode = .byWordWrapping
 
     subtitleLabel.text = subtitle
     subtitleLabel.setFontStyle(.regular14, color: .blackSecondary)
     subtitleLabel.textAlignment = .center
     subtitleLabel.isHidden = subtitle == nil
-    subtitleLabel.numberOfLines = 2
+    subtitleLabel.numberOfLines = 0
+    subtitleLabel.lineBreakMode = .byWordWrapping
 
     stackView.axis = .vertical
     stackView.alignment = .center
@@ -110,6 +113,15 @@ final class PlaceholderView: UIView {
     centerYConstraint.constant = -min(offset, maxOffset)
     UIView.animate(withDuration: kDefaultAnimationDuration, delay: .zero, options: [.beginFromCurrentState, .curveEaseOut]) {
       self.layoutIfNeeded()
+    }
+  }
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    let maxLabelWidth = floor(bounds.width * 0.8)
+    if titleLabel.preferredMaxLayoutWidth != maxLabelWidth {
+      titleLabel.preferredMaxLayoutWidth = maxLabelWidth
+      subtitleLabel.preferredMaxLayoutWidth = maxLabelWidth
     }
   }
 }
