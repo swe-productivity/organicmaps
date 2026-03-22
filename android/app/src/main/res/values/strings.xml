@@ -405,6 +405,8 @@
     <!-- Edit open hours/set time and minutes dialog -->
     <string name="next_button">Next</string>
     <!-- Tab title in the Edit Opening Hours time picker -->
+    <string name="editor_recently_used_types">Recently Used</string>
+    <string name="editor_all_types">All Types</string>
     <string name="editor_time_from">From</string>
     <!-- Tab title in the Edit Opening Hours time picker -->
     <string name="editor_time_to">To</string>
