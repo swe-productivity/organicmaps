@@ -417,19 +417,25 @@ extension DownloadMapsViewController: StorageObserver {
     if skipCountryEvent, countryId == dataSource.getParentCountryId() {
       return
     }
-    dataSource.reload {
-      reloadData()
+
+    let oldCount = dataSource.numberOfItems(in: 0)
+    dataSource.reload {}
+    let newCount = dataSource.numberOfItems(in: 0)
+
+    if oldCount != newCount {
+      tableView.reloadData()
       noMapsContainer.isHidden = !dataSource.isEmpty || Storage.shared().downloadInProgress()
-    }
-    if countryId == dataSource.getParentCountryId() {
-      configButtons()
+    } else {
+      for cell in tableView.visibleCells {
+        guard let downloaderCell = cell as? MWMMapDownloaderTableViewCell else { continue }
+        if downloaderCell.nodeAttrs.countryId != countryId { continue }
+        guard let indexPath = tableView.indexPath(for: downloaderCell) else { continue }
+        downloaderCell.config(dataSource.item(at: indexPath), searchQuery: searchController.searchBar.text)
+      }
     }
 
-    for cell in tableView.visibleCells {
-      guard let downloaderCell = cell as? MWMMapDownloaderTableViewCell else { continue }
-      if downloaderCell.nodeAttrs.countryId != countryId { continue }
-      guard let indexPath = tableView.indexPath(for: downloaderCell) else { return }
-      downloaderCell.config(dataSource.item(at: indexPath), searchQuery: searchController.searchBar.text)
+    if countryId == dataSource.getParentCountryId() {
+      configButtons()
     }
   }
 
