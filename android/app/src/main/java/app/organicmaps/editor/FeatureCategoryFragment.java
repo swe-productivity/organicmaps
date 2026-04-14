@@ -25,8 +25,12 @@ import app.organicmaps.util.Utils;
 import app.organicmaps.widget.SearchToolbarController;
 import app.organicmaps.widget.ToolbarController;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class FeatureCategoryFragment
     extends BaseMwmRecyclerFragment<FeatureCategoryAdapter> implements FeatureCategoryAdapter.FooterListener
@@ -35,6 +39,11 @@ public class FeatureCategoryFragment
   protected ToolbarController mToolbarController;
   private static final String NOTE_CONFIRMATION_SHOWN = "NoteConfirmationAlertWasShown";
   private static String mPendingNoteText = "";
+
+  // Cached full sorted list — used when restoring from search
+  private FeatureCategory[] mAllCategories;
+  // Cached validated recent list — used when restoring from search
+  private FeatureCategory[] mRecentCategories;
 
   public interface FeatureCategoryListener
   {
@@ -70,13 +79,17 @@ public class FeatureCategoryFragment
 
   private void setFilter(String query)
   {
-    String locale = Language.getDefaultLocale();
-    String[] creatableTypes = query.isEmpty() ? Editor.nativeGetAllCreatableFeatureTypes(locale)
-                                              : Editor.nativeSearchCreatableFeatureTypes(query, locale);
-
-    FeatureCategory[] categories = makeFeatureCategoriesFromTypes(creatableTypes);
-
-    getAdapter().setCategories(categories);
+    if (query.isEmpty())
+    {
+      getAdapter().setSectionedCategories(mRecentCategories, mAllCategories);
+    }
+    else
+    {
+      String locale = Language.getDefaultLocale();
+      String[] searchResults = Editor.nativeSearchCreatableFeatureTypes(query, locale);
+      FeatureCategory[] categories = makeFeatureCategoriesFromTypes(searchResults);
+      getAdapter().setSearchResults(categories);
+    }
     getRecyclerView().scrollToPosition(0);
   }
 
@@ -87,9 +100,35 @@ public class FeatureCategoryFragment
     String locale = Language.getDefaultLocale();
     String[] creatableTypes = Editor.nativeGetAllCreatableFeatureTypes(locale);
 
-    FeatureCategory[] categories = makeFeatureCategoriesFromTypes(creatableTypes);
+    mAllCategories = makeFeatureCategoriesFromTypes(creatableTypes);
+    mRecentCategories = resolveRecentCategories(creatableTypes);
 
-    return new FeatureCategoryAdapter(this, categories, mSelectedCategory);
+    return new FeatureCategoryAdapter(this, mRecentCategories, mAllCategories, mSelectedCategory);
+  }
+
+  /**
+   * Resolves stored recent type keys against the current creatable types list.
+   * This filters out any types that no longer exist in the editor config.
+   */
+  @NonNull
+  private FeatureCategory[] resolveRecentCategories(@NonNull String[] creatableTypes)
+  {
+    List<String> recentKeys = RecentFeatureCategoryHelper.getRecentTypes(requireContext());
+    if (recentKeys.isEmpty())
+      return new FeatureCategory[0];
+
+    for (String type : creatableTypes)
+    for (String key : recentKeys)   // ok since max size < 10
+    if (key == type)
+      resolved.add(new FeatureCategory(key, getLocalizedFeatureType(requireContext(), type)));
+
+    List<FeatureCategory> resolved = new ArrayList<>();
+    for (String key : recentKeys)
+    {
+      if (typeToName.containsKey(key))
+        resolved.add(new FeatureCategory(key, typeToName.get(key)));
+    }
+    return resolved.toArray(new FeatureCategory[0]);
   }
 
   @NonNull

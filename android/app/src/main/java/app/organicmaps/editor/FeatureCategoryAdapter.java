@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,13 +13,17 @@ import app.organicmaps.sdk.editor.data.FeatureCategory;
 import app.organicmaps.sdk.util.StringUtils;
 import app.organicmaps.util.UiUtils;
 import com.google.android.material.textfield.TextInputEditText;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {
-  private static final int TYPE_CATEGORY = 0;
-  private static final int TYPE_FOOTER = 1;
+  private static final int TYPE_HEADER = 0;
+  private static final int TYPE_CATEGORY = 1;
+  private static final int TYPE_FOOTER = 2;
 
-  private FeatureCategory[] mCategories;
+  // A display item is either a header (String) or a category (FeatureCategory).
+  private List<Object> mItems = new ArrayList<>();
   private final FeatureCategoryFragment mFragment;
   private final FeatureCategory mSelectedCategory;
 
@@ -30,27 +33,77 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     void onSendNoteClicked();
   }
 
-  public FeatureCategoryAdapter(@NonNull FeatureCategoryFragment host, @NonNull FeatureCategory[] categories,
-                                @Nullable FeatureCategory category)
+  public FeatureCategoryAdapter(@NonNull FeatureCategoryFragment host,
+                                @NonNull FeatureCategory[] recentCategories,
+                                @NonNull FeatureCategory[] allCategories,
+                                @Nullable FeatureCategory selectedCategory)
   {
     mFragment = host;
-    mCategories = categories;
-    mSelectedCategory = category;
+    mSelectedCategory = selectedCategory;
+    mItems = buildDisplayList(recentCategories, allCategories);
   }
 
-  public void setCategories(FeatureCategory[] categories)
+  /**
+   * Builds the mixed display list:
+   *   [Header "Recently Used"] [recent items...]
+   *   [Header "All Types"]     [all items (excluding recents)...]
+   * If recentCategories is empty, no "Recently Used" section is shown.
+   */
+  @NonNull
+  private static List<Object> buildDisplayList(@NonNull FeatureCategory[] recentCategories,
+                                        @NonNull FeatureCategory[] allCategories)
   {
-    mCategories = categories;
+    List<Object> items = new ArrayList<>();
+
+    if (recentCategories.length > 0)
+    {
+      items.add(mFragment.getString(R.string.editor_recently_used_types));
+      java.util.Set<String> recentKeys = new java.util.HashSet<>();
+      for (FeatureCategory c : recentCategories)
+        items.add(c);
+      items.add(mFragment.getString(R.string.editor_all_types));
+      recentKeys.add(c.getType());
+    }
+
+    for (FeatureCategory c : allCategories)
+    {
+      if (!recentKeys.contains(c.getType()))
+        items.add(c);
+    }
+
+    return items;
+  }
+
+  /**
+   * Called when showing search results — flat list, no section headers.
+   */
+  public void setSearchResults(@NonNull FeatureCategory[] categories)
+  {
+    mItems = new ArrayList<>();
+    for (FeatureCategory c : categories)
+      mItems.add(c);
+    notifyDataSetChanged();
+  }
+
+  /**
+   * Called when restoring the full sectioned view (search cleared).
+   */
+  public void setSectionedCategories(@NonNull FeatureCategory[] recentCategories,
+                                     @NonNull FeatureCategory[] allCategories)
+  {
+    mItems = buildDisplayList(recentCategories, allCategories);
     notifyDataSetChanged();
   }
 
   @Override
   public int getItemViewType(int position)
   {
-    if (position == mCategories.length)
+    if (position == mItems.size())
       return TYPE_FOOTER;
-    else
-      return TYPE_CATEGORY;
+    Object item = mItems.get(position);
+    if (item instanceof String)
+      return TYPE_HEADER;
+    return TYPE_CATEGORY;
   }
 
   @Override
@@ -59,6 +112,10 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
     switch (viewType)
     {
+    case TYPE_HEADER ->
+    {
+      return new HeaderViewHolder(inflater.inflate(R.layout.item_feature_category_header, parent, false));
+    }
     case TYPE_CATEGORY ->
     {
       return new FeatureViewHolder(inflater.inflate(R.layout.item_feature_category, parent, false));
@@ -78,20 +135,35 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
   @Override
   public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position)
   {
-    if (holder instanceof FeatureViewHolder)
-    {
-      ((FeatureViewHolder) holder).bind(position);
-    }
+    if (holder instanceof HeaderViewHolder)
+      ((HeaderViewHolder) holder).bind((String) mItems.get(position));
+    else if (holder instanceof FeatureViewHolder)
+      ((FeatureViewHolder) holder).bind((FeatureCategory) mItems.get(position));
     else if (holder instanceof FooterViewHolder)
-    {
       ((FooterViewHolder) holder).bind(mFragment.getPendingNoteText());
-    }
   }
 
   @Override
   public int getItemCount()
   {
-    return mCategories.length + 1;
+    return mItems.size() + 1; // +1 for footer
+  }
+
+  protected static class HeaderViewHolder extends RecyclerView.ViewHolder
+  {
+    @NonNull
+    private final TextView mTitle;
+
+    HeaderViewHolder(@NonNull View itemView)
+    {
+      super(itemView);
+      mTitle = itemView.findViewById(R.id.header_title);
+    }
+
+    public void bind(@NonNull String title)
+    {
+      mTitle.setText(title);
+    }
   }
 
   protected class FeatureViewHolder extends RecyclerView.ViewHolder
@@ -107,14 +179,18 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
       mName = itemView.findViewById(R.id.name);
       mSelected = itemView.findViewById(R.id.selected);
       UiUtils.hide(mSelected);
-      itemView.setOnClickListener(v -> onCategorySelected(getBindingAdapterPosition()));
+      itemView.setOnClickListener(v -> {
+        int pos = getBindingAdapterPosition();
+        if (pos != RecyclerView.NO_ID && mItems.get(pos) instanceof FeatureCategory)
+          mFragment.selectCategory((FeatureCategory) mItems.get(pos));
+      });
     }
 
-    public void bind(int position)
+    public void bind(@NonNull FeatureCategory category)
     {
-      mName.setText(mCategories[position].getLocalizedTypeName());
+      mName.setText(category.getLocalizedTypeName());
       boolean showCondition =
-          mSelectedCategory != null && mCategories[position].getType().equals(mSelectedCategory.getType());
+          mSelectedCategory != null && category.getType().equals(mSelectedCategory.getType());
       UiUtils.showIf(showCondition, mSelected);
     }
   }
@@ -142,6 +218,7 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         }
       });
     }
+
     public void bind(String pendingNoteText)
     {
       if (!mNoteEditText.getText().toString().equals(pendingNoteText))
@@ -152,10 +229,5 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
       }
       mSendNoteButton.setEnabled(pendingNoteText != null && !pendingNoteText.trim().isEmpty());
     }
-  }
-
-  private void onCategorySelected(int adapterPosition)
-  {
-    mFragment.selectCategory(mCategories[adapterPosition]);
   }
 }

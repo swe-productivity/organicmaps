@@ -20,6 +20,7 @@ public class FeatureCategoryActivity
   @Override
   public void onFeatureCategorySelected(FeatureCategory category)
   {
+    RecentFeatureCategoryHelper.addRecentType(this, category.getType());
     Editor.createMapObject(category);
     final Intent intent = new Intent(this, EditorActivity.class);
     intent.putExtra(EXTRA_FEATURE_CATEGORY, category);
