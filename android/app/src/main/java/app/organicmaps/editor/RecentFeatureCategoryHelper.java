@@ -29,7 +29,7 @@ class RecentFeatureCategoryHelper
     recents.remove(type);
     recents.add(0, type);
     if (recents.size() > MAX_RECENT)
-      recents = recents.subList(0, MAX_RECENT);
+        recents.remove(recents.size() - 1);
     String stored = String.join(SEPARATOR, recents);
     MwmApplication.prefs(context).edit().putString(PREF_KEY, stored).apply();
   }
