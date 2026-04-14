@@ -50,7 +50,7 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
    * If recentCategories is empty, no "Recently Used" section is shown.
    */
   @NonNull
-  private List<Object> buildDisplayList(@NonNull FeatureCategory[] recentCategories,
+  private static List<Object> buildDisplayList(@NonNull FeatureCategory[] recentCategories,
                                         @NonNull FeatureCategory[] allCategories)
   {
     List<Object> items = new ArrayList<>();
@@ -58,15 +58,12 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     if (recentCategories.length > 0)
     {
       items.add(mFragment.getString(R.string.editor_recently_used_types));
+      java.util.Set<String> recentKeys = new java.util.HashSet<>();
       for (FeatureCategory c : recentCategories)
         items.add(c);
       items.add(mFragment.getString(R.string.editor_all_types));
-    }
-
-    // Build a set of recent type keys to exclude from the "All" section
-    java.util.Set<String> recentKeys = new java.util.HashSet<>();
-    for (FeatureCategory c : recentCategories)
       recentKeys.add(c.getType());
+    }
 
     for (FeatureCategory c : allCategories)
     {
