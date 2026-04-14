@@ -117,10 +117,10 @@ public class FeatureCategoryFragment
     if (recentKeys.isEmpty())
       return new FeatureCategory[0];
 
-    // Build a lookup map from type key → localized name
-    java.util.Map<String, String> typeToName = new java.util.HashMap<>();
     for (String type : creatableTypes)
-      typeToName.put(type, getLocalizedFeatureType(requireContext(), type));
+    for (String key : recentKeys)   // ok since max size < 10
+    if (key == type)
+      resolved.add(new FeatureCategory(key, getLocalizedFeatureType(requireContext(), type)));
 
     List<FeatureCategory> resolved = new ArrayList<>();
     for (String key : recentKeys)
