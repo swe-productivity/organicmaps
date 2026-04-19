@@ -418,25 +418,24 @@ extension DownloadMapsViewController: StorageObserver {
       return
     }
 
-    let oldCount = dataSource.numberOfItems(in: 0)
-    dataSource.reload {}
-    let newCount = dataSource.numberOfItems(in: 0)
+    dataSource.reload { [weak self] in
+      guard let self = self else {return}
+      
+      self.tableView.reloadData()
 
-    if oldCount != newCount {
-      tableView.reloadData()
-      noMapsContainer.isHidden = !dataSource.isEmpty || Storage.shared().downloadInProgress()
-    } else {
-      for cell in tableView.visibleCells {
+      self.noMapsContainer.isHidden = !self.dataSource.isEmpty || storage.shared().downloadInProgress()
+
+      if countryId = self.dataSource.getParentCountryId(){
+        self.configButtons()
+      }
+      
+      for cell in self.tableView.visibleCells {
         guard let downloaderCell = cell as? MWMMapDownloaderTableViewCell else { continue }
         if downloaderCell.nodeAttrs.countryId != countryId { continue }
-        guard let indexPath = tableView.indexPath(for: downloaderCell) else { continue }
-        downloaderCell.config(dataSource.item(at: indexPath), searchQuery: searchController.searchBar.text)
+        guard let indexPath = self.tableView.indexPath(for: downloaderCell) else { continue}
+        downloaderCell.config(self.dataSource.item(at: indexPath), searchQuery: self.searchController.searchBar.text)
       }
-    }
-
-    if countryId == dataSource.getParentCountryId() {
-      configButtons()
-    }
+    }    
   }
 
   func processCountry(_ countryId: String, downloadedBytes: UInt64, totalBytes: UInt64) {
